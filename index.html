@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МИЛЕ — Центр Лазерной Косметологии</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-text">МИ<span class="letter-l">Λ</span>Е</div>
+                <div class="logo-subtitle">Центр лазерной косметологии</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li class="cart-icon" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </li>
+                <li><a href="#contact" class="nav-cta">Записаться</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">Премиальная косметология · Великий Новгород</div>
+            <h1>Красота — это<br><span class="accent">искусство</span></h1>
+            <p class="hero-subtitle">Центр лазерной косметологии МИЛЕ — место, где передовые технологии встречаются с индивидуальным подходом к каждому клиенту</p>
+            
+            <div class="hero-socials">
+                <a href="https://t.me/mile_beauty" target="_blank" rel="noopener" class="hero-social-btn tg">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/></svg>
+                    Telegram-канал
+                </a>
+                <a href="https://vk.ru/mile_beauty" target="_blank" rel="noopener" class="hero-social-btn vk">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#0077FF"/>
+                        <path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.598-.189 1.366 1.26 2.18 1.817.616.422 1.084.33 1.084.33l2.178-.03s1.14-.07.599-.964c-.044-.073-.314-.661-1.618-1.869-1.366-1.265-1.183-1.059.462-3.246.999-1.331 1.398-2.143 1.273-2.491-.119-.332-.856-.244-.856-.244l-2.45.015s-.182-.025-.317.056c-.132.079-.217.263-.217.263s-.39 1.037-.91 1.92c-1.096 1.86-1.534 1.96-1.713 1.842-.416-.272-.312-1.095-.312-1.678 0-1.82.276-2.578-.537-2.774-.27-.065-.468-.108-1.157-.115-.884-.009-1.633.003-2.057.21-.282.138-.5.444-.367.462.164.022.534.1.73.365.253.342.244 1.111.244 1.111s.145 2.14-.34 2.404c-.333.182-.79-.189-1.77-1.885-.502-.869-.88-1.83-.88-1.83s-.073-.178-.203-.274c-.158-.116-.378-.153-.378-.153l-2.327.015s-.35.01-.478.162c-.114.135-.009.413-.009.413s1.837 4.304 3.918 6.472c1.907 1.987 4.072 1.856 4.072 1.856h.982z" fill="white"/>
+                    </svg>
+                    ВКонтакте
+                </a>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Записаться на приём</a>
+                <a href="#catalog" class="btn btn-secondary">Каталог товаров</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">10<span>+</span></div>
+                <div class="stat-label">Лет опыта</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5000<span>+</span></div>
+                <div class="stat-label">Довольных клиентов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Филиала в городе</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100<span>%</span></div>
+                <div class="stat-label">Сертифицировано</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Наши услуги</div>
+                <h2 class="section-title">Комплексный <strong>уход</strong> за собой</h2>
+                <p class="section-subtitle">Современные технологии и проверенные методики для вашей красоты и здоровья</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">⚡</div>
+                    <h3>Лазерная эпиляция</h3>
+                    <p>Безболезненное удаление волос с помощью диодного лазера последнего поколения. Долговременный результат уже после первых сеансов</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">💉</div>
+                    <h3>Инъекционная косметология</h3>
+                    <p>Ботулинотерапия, контурная пластика филлерами, биоревитализация. Только сертифицированные препараты премиум-класса</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">✨</div>
+                    <h3>Уход за лицом</h3>
+                    <p>Профессиональные чистки, пилинги, уходовые программы. Индивидуальный подбор процедур под ваш тип кожи</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">🌟</div>
+                    <h3>Аппаратная косметология</h3>
+                    <p>RF-лифтинг, микротоковая терапия, ультразвуковой SMAS-лифтинг. Омоложение без инъекций и реабилитации</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-number">05</div>
+                    <div class="service-icon">💎</div>
+                    <h3>Контурная пластика</h3>
+                    <p>Коррекция губ, скул, подбородка, носослёзной борозды. Естественный результат, подчёркивающий вашу индивидуальность</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-number">06</div>
+                    <div class="service-icon">🌸</div>
+                    <h3>Массаж и SPA-программы</h3>
+                    <p>Лимфодренажный, антицеллюлитный, расслабляющий массаж. Комплексные программы для тела и души</p>
+                    <a href="#contact" class="service-link">Записаться →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in"></div>
+                <div class="about-text fade-in">
+                    <div class="section-label" style="text-align: left;">О центре</div>
+                    <h2>Мы создаём <strong>красоту</strong> с заботой о вас</h2>
+                    <p>Центр лазерной косметологии МИЛЕ — это пространство, где каждая деталь продумана для вашего комфорта. Мы объединяем передовые технологии, медицинскую экспертизу и эстетику.</p>
+                    <p>Наши специалисты — сертифицированные врачи-косметологи с многолетним опытом, которые постоянно повышают квалификацию в ведущих клиниках мира.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <div>
+                                <h4>Лицензия</h4>
+                                <p>Медицинская лицензия на все виды услуг</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <div>
+                                <h4>Оборудование</h4>
+                                <p>Аппараты премиум-класса от мировых брендов</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <div>
+                                <h4>Препараты</h4>
+                                <p>Только оригинальная сертифицированная продукция</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✓</div>
+                            <div>
+                                <h4>Гарантия</h4>
+                                <p>Гарантия результата и постпроцедурная поддержка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Магазин</div>
+                <h2 class="section-title">Каталог <strong>товаров</strong></h2>
+                <p class="section-subtitle">Профессиональная косметика и подарочные сертификаты от центра МИЛЕ</p>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все товары</button>
+                <button class="filter-btn" data-filter="skincare">Уход за лицом</button>
+                <button class="filter-btn" data-filter="body">Уход за телом</button>
+                <button class="filter-btn" data-filter="sets">Наборы</button>
+                <button class="filter-btn" data-filter="certificates">Сертификаты</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Тарифы</div>
+                <h2 class="section-title">Прозрачные <strong>цены</strong></h2>
+                <p class="section-subtitle">Выберите программу, которая подходит именно вам</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3>Базовый</h3>
+                    <div class="price">1 500₽ <span>/ сеанс</span></div>
+                    <p class="price-desc">Идеально для знакомства с нашим центром</p>
+                    <ul class="pricing-features">
+                        <li>Консультация косметолога</li>
+                        <li>Диагностика кожи</li>
+                        <li>Базовый уход за лицом</li>
+                        <li>Профессиональная чистка</li>
+                        <li>Маска по типу кожи</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Выбрать</a>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <h3>Оптимальный</h3>
+                    <div class="price">3 500₽ <span>/ сеанс</span></div>
+                    <p class="price-desc">Наш самый популярный пакет услуг</p>
+                    <ul class="pricing-features">
+                        <li>Всё из базового пакета</li>
+                        <li>Лазерная эпиляция (1 зона)</li>
+                        <li>Мезотерапия лица</li>
+                        <li>Химический пилинг</li>
+                        <li>Скидка 15% на следующий визит</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Выбрать</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h3>Премиум</h3>
+                    <div class="price">7 000₽ <span>/ сеанс</span></div>
+                    <p class="price-desc">Максимальный уход и внимание</p>
+                    <ul class="pricing-features">
+                        <li>Всё из оптимального пакета</li>
+                        <li>Инъекции ботулотоксина</li>
+                        <li>Контурная пластика</li>
+                        <li>RF-лифтинг лица</li>
+                        <li>Персональный куратор</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Отзывы</div>
+                <h2 class="section-title">Что говорят <strong>клиенты</strong></h2>
+                <p class="section-subtitle">Нам доверяют тысячи женщин и мужчин</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Прекрасный салон! Делала лазерную эпиляцию — результат превзошёл все ожидания. Персонал очень внимательный и профессиональный. Атмосфера располагает к расслаблению. Рекомендую всем!</p>
+                    <div class="review-author">
+                        <div class="review-avatar">А</div>
+                        <div>
+                            <div class="review-name">Анна Михайлова</div>
+                            <div class="review-service">Лазерная эпиляция</div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Хожу в МИЛЕ уже 2 года. Делала ботокс и филлеры — всё отлично, естественно и красиво. Врачи настоящие профессионалы, всё объясняют, подбирают индивидуально. Очень довольна результатом!</p>
+                    <div class="review-author">
+                        <div class="review-avatar">Е</div>
+                        <div>
+                            <div class="review-name">Екатерина Соколова</div>
+                            <div class="review-service">Инъекционная косметология</div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-quote">"</div>
+                    <p class="review-text">Очень уютная атмосфера, приятный интерьер. Делала комплексный уход за лицом — кожа как у младенца! Отдельное спасибо за внимательное отношение и подробные рекомендации по домашнему уходу.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">М</div>
+                        <div>
+                            <div class="review-name">Мария Краснова</div>
+                            <div class="review-service">Уход за лицом</div>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color: var(--gold-light);">Контакты</div>
+                <h2 class="section-title">Запишитесь на <strong style="color: var(--gold);">приём</strong></h2>
+                <p class="section-subtitle">Два филиала в Великом Новгороде — выберите удобный для вас</p>
+            </div>
+
+            <div class="contact-top">
+                <div class="address-card fade-in">
+                    <div class="address-card-header">
+                        <div class="address-icon">📍</div>
+                        <div>
+                            <div class="address-card-title">Филиал 1 · Каберова-Власьевская</div>
+                            <div class="address-card-phone">607-607</div>
+                        </div>
+                    </div>
+                    <div class="address-card-street">ул. Каберова-Власьевская, 97</div>
+                    <div class="address-card-city">Великий Новгород</div>
+                    <div class="address-map">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=31.268%2C58.518%2C31.302%2C58.536&layer=mapnik&marker=58.527%2C31.285" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта — ул. Каберова-Власьевская, 97"></iframe>
+                    </div>
+                    <div class="address-actions">
+                        <a href="https://yandex.ru/maps/?text=Великий+Новгород+ул+Каберова-Власьевская+97" target="_blank" rel="noopener" class="address-btn route">🧭 Маршрут</a>
+                        <a href="tel:+78162607607" class="address-btn call">📞 Позвонить</a>
+                    </div>
+                </div>
+
+                <div class="address-card fade-in">
+                    <div class="address-card-header">
+                        <div class="address-icon">📍</div>
+                        <div>
+                            <div class="address-card-title">Филиал 2 · Б.Санкт-Петербургская</div>
+                            <div class="address-card-phone">600-077</div>
+                        </div>
+                    </div>
+                    <div class="address-card
